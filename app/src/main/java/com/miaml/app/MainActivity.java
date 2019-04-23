@@ -2,6 +2,7 @@ package com.miaml.app;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
 
 import com.miaml.wxplayer.WxMediaController;
 import com.miaml.wxplayer.WxPlayer;
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        // 全屏显示
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         mWxPlayer = (WxPlayer) findViewById(R.id.wx_player);
 
         String fileName = "https://www.zxpaas.com/qyapp/im/view?id=60d9e29101184461b6acbc864d5e10fe&type=mp4.mp4";
